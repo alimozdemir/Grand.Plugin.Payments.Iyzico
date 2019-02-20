@@ -1,0 +1,8 @@
+﻿Group: Payment methods
+FriendlyName: Iyzico
+SystemName: Payments.Iyzico
+Version: 1.14
+SupportedVersions: 4.30
+Author: Alim Ozdemir (lyzerk)
+DisplayOrder: 1
+FileName: Grand.Plugin.Payments.Iyzico.dll

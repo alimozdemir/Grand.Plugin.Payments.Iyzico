@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "";
+}
+@model Grand.Plugin.Payments.Iyzico.Models.PaymentInfoModel
+<table width="100%"  cellspacing="2" cellpadding="1" border="0">
+    <tr>
+        <td>
+            <label asp-for="CreditCardTypes" class="col-form-label">@T("Payment.SelectCreditCard"):</label>
+        </td>
+        <td>
+            <select asp-for="CreditCardType" class="custom-select form-control" asp-items="Model.CreditCardTypes"></select>
+            <span asp-validation-for="CreditCardType"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="CardholderName" class="col-form-label">@T("Payment.CardholderName"):</label>
+        </td>
+        <td>
+            <input class="form-control" asp-for="CardholderName" />
+            <span asp-validation-for="CardholderName"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="CardNumber" class="col-form-label">@T("Payment.CardNumber"):</label>
+        </td>
+        <td>
+            <input class="form-control" asp-for="CardNumber" />
+            <span asp-validation-for="CardNumber"></span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <label asp-for="ExpireMonth" class="col-form-label">@T("Payment.ExpirationDate"):</label>
+        </td>
+        <td>
+            <select asp-for="ExpireMonth" class="form-control" style="width: 70px; display: inline;" asp-items="Model.ExpireMonths"></select>
+            /
+            <select asp-for="ExpireYear" class="form-control" style="width: 100px; display: inline;"  asp-items="Model.ExpireYears"></select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="CardCode" class="col-form-label">@T("Payment.CardCode"):</label>
+        </td>
+        <td>
+            <input class="form-control" asp-for="CardCode" style="width: 70px;" />
+            <span asp-validation-for="CardCode"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="Secure3D" class="col-form-label">@T("Payment.Secure3D"):</label>
+        </td>
+        <td>
+            <label class="custom-control custom-checkbox">
+                <input class="custom-control-input" name="Secure3D" id="Secure3D" type="checkbox" />
+                <span class="custom-control-label" asp-validation-for="Secure3D"></span>
+                @**@
+            </label>
+        </td>
+    </tr>
+</table>
